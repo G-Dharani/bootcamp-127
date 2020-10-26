@@ -1,56 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
+   
+    
 
 </head>
 
-
-
 <body>
     
-<div class="container" >
-    <div class="row">
-     
-        <div class="coloumn">
-           <img class="profile" src= "./assests/realmadrid.png" alt="mi" height="100px" width="100px">
-        <span class="name" id="team-1-name"> REAL MADRID</span>
-        <div class=" row runs" id="team-1-runs">
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot"> </span>
+    <div class="gamemain" style="visibility: hidden;">
+        <div class="gamecard">
+            <div class="image">
+                <img id="teamimg" src="./assests/realmadrid.png" alt="">
+            </div>
+            <div class="title">
+                <h1 id="team1"> Realmadrid </h1>
+            </div>
+            <div id="score">
+                <div id="progress01">
+                    <div class='prog' id="qIndex" ></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                </div>
+            </div>
+        </div>
+        <div id="board">
+            <h3 id="result" style="visibility: hidden;">Result</h3>
+            <button type="button" id="again" onclick="history.go(0)" style="visibility: hidden;">Try Again</button>
+ 
+            <button type="button" style="visibility: hidden;" class="btn2" id="btn" onclick="play1()">Shoot </button>
+        </div>
+        <div class="gamecard">
+            <div class="image">
+                <img id="teamimg1" src="./assests/huesca.png" alt="">
+            </div>
+            <div class="title">
+                <h1 id="team2">Huesca
+
+                </h1>
+            </div>
+            <div id="score">
+                <div id="progress02">
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                </div>
+            </div>
         </div>
     </div>
-         <div class="coloumn">
-             <div class="row score">
-                 <span id="team-1-score"> </span>
-                 <span>-</span>
-                 <span id="team-2-score"> </span>
-             </div>
-     </div>
-     
-     <div class="coloumn">
-        <img class="profile" src= "./assests/huesca.png" alt="mi" height="100px" width="100px">
-        <span class="name" id="team-2-name"> HUESCA</span>
-        <div class=" row runs" id="team-2-runs">
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
-            <span class="coloumn dot">  </span>
+    <div>
+    </div>
+
+    <div class="gamemain1">
+        <div class="gamecard">
+            <div class="image">
+                <img src="./assests/fcb.png" alt="Barcelona">
+            </div>
+            <div class="title">
+                <h1 id="team11">Barcelona</h1>
+            </div>
+            <div id="score">
+                <div id="progress">
+                    <div class='prog' id="qIndex" ></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                </div>
+            </div>
         </div>
-  </div>
-        
-     </div>  
-     <div class="row">
-        <button class="strike" id="strike" </button>
-    </div> 
-</div>
-<script src="./app.js"></script>
+        <div id="board">
+            <h3 id="result1" style="visibility: hidden;">Result</h3>
+            <button type="button" id="again" onclick="history.go(0)" >Try Again</button>
+ 
+            <button type="button" id="btn"class="btn1" onclick="level2()">Shoot </button>
+        </div>
+        <div class="gamecard">
+            <div class="image">
+                <img src="./assests/huesca.png" alt="huesca">
+            </div>
+            <div class="title">
+                <h1 id="team12">Huesca</h1>
+            </div>
+            <div id="score">
+                <div id="progress1">
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gamecard">
+            <div class="image">
+                <img src="./assests/mcu.png" alt="Manchester">
+            </div>
+            <div class="title">
+                <h1 id="team21">Manchester</h1>
+            </div>
+            <div id="score">
+                <div id="progress21">
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                </div>
+            </div>
+        </div>
+        <div id="board">
+            <h3 id="result2" style="visibility: hidden;">Result</h3> 
+            <button type="button" id="again" onclick="history.go(0)">Try Again</button>
+ 
+            <button type="button" id="btn" class="btn" onclick="level1()">Shoot </button>
+        </div>
+        <div class="gamecard">
+            <div class="image">
+                <img src="./assests/realmadrid.png" alt="realmadrid">
+            </div>
+            <div class="title">
+                <h1 id="team22">Realmadrid</h1>
+            </div>
+            <div id="score">
+                <div id="progress22">
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                    <div class='prog' id="qIndex"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./j.js"></script>
+    <script src="./f.js"></script>
+    
 </body>
+
 </html>
+
+
