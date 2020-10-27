@@ -18,8 +18,8 @@ function play1() {
         console.log("Team 2 " + runteam02)
         score01 = runteam01.reduce(reducer);
         score02 = runteam02.reduce(reducer);
-        var teamname1 = document.getElementById("team1").textContent;
-        var teamname2 = document.getElementById("team2").textContent;
+        var teamname1 = document.getElementById("team-1-name").textContent;
+        var teamname2 = document.getElementById("team-2-name").textContent;
        
         
        
@@ -38,12 +38,12 @@ function play1() {
     }
     else if (count1 % 2 == 0) {
 
-        var name = document.getElementById("team2").textContent;
+        var name = document.getElementById("team-2-name").textContent;
         runteam02.push(player2(randomNumber))
         document.querySelector('#btn').innerHTML = 'Shoot ' + name;
     }
     else {
-        var name = document.getElementById("team1").textContent;
+        var name = document.getElementById("team-1-name").textContent;
         runteam01.push(player1(randomNumber))
         document.querySelector('#btn').innerHTML = 'Shoot ' + name;
     }

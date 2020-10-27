@@ -15,13 +15,13 @@ function level2() {
         console.log("Team 2 " + runteam12)
         score11 = runteam11.reduce(reducer);
         score12 = runteam12.reduce(reducer);
-        var teamname11 = document.getElementById("team11").textContent;
-        var teamname12 = document.getElementById("team12").textContent;
+        var teamname11 = document.getElementById("team-11-name").textContent;
+        var teamname12 = document.getElementById("team-12-name").textContent;
         document.getElementById("result1").style.visibility = "visible";
         if (score11 <score12) {
             document.getElementById("result1").innerHTML = teamname11 + " Winner"
             document.getElementById("teamimg1").src = "./assests/"+teamname11+".png"  
-            document.getElementById("team2").innerHTML=teamname11 ; 
+            document.getElementById("team-2-name").innerHTML=teamname11 ; 
         }
         else if (score11 == score12) {
             document.getElementById("result1").innerHTML = " Match draw try again"
@@ -29,17 +29,19 @@ function level2() {
         else {
             document.getElementById("result1").innerHTML = teamname12 + " Winner"
             document.getElementById("teamimg1").src = "./assests/"+teamname12+".png"  
-            document.getElementById("team2").innerHTML=teamname12 ; 
+            document.getElementById("team-2-name").innerHTML=teamname12 ; 
         }
         document.getElementById('board').style.visibility = "visible";
 
     }
     else if (count3 % 2 == 0) {
 
-        runteam12.push(player11(randomNumber))
+        runteam12.push(player11(randomNumber));
+        document.querySelector('#btn').innerHTML = 'Shoot ' + name;
     }
     else {
-        runteam11.push(player12(randomNumber))
+        runteam11.push(player12(randomNumber));
+        document.querySelector('#btn').innerHTML = 'Shoot ' + name;
     }
 
 }
